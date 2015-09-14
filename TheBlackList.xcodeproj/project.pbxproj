@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		737935E81BA6CCE4004AB6C1 /* Black.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737935E71BA6CCE4004AB6C1 /* Black.swift */; };
+		737935EA1BA6DCD0004AB6C1 /* TBLController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737935E91BA6DCD0004AB6C1 /* TBLController.swift */; };
+		73C777AA1BA309AD00002C7B /* StarterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C777A91BA309AD00002C7B /* StarterViewController.swift */; };
 		73EA37CE1BA1C80400973689 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73EA37CD1BA1C80400973689 /* AppDelegate.swift */; };
 		73EA37D01BA1C80400973689 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73EA37CF1BA1C80400973689 /* MasterViewController.swift */; };
 		73EA37D21BA1C80400973689 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73EA37D11BA1C80400973689 /* DetailViewController.swift */; };
@@ -14,6 +17,7 @@
 		73EA37D71BA1C80400973689 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73EA37D61BA1C80400973689 /* Images.xcassets */; };
 		73EA37DA1BA1C80400973689 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 73EA37D81BA1C80400973689 /* LaunchScreen.xib */; };
 		73EA37E61BA1C80400973689 /* TheBlackListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73EA37E51BA1C80400973689 /* TheBlackListTests.swift */; };
+		73F8DD321BA5DAAD0057E412 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F8DD311BA5DAAD0057E412 /* SwiftyJSON.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +31,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		737935E71BA6CCE4004AB6C1 /* Black.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Black.swift; sourceTree = "<group>"; };
+		737935E91BA6DCD0004AB6C1 /* TBLController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TBLController.swift; sourceTree = "<group>"; };
+		73C777A91BA309AD00002C7B /* StarterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarterViewController.swift; sourceTree = "<group>"; };
 		73EA37C81BA1C80400973689 /* TheBlackList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheBlackList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		73EA37CC1BA1C80400973689 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		73EA37CD1BA1C80400973689 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -38,6 +45,8 @@
 		73EA37DF1BA1C80400973689 /* TheBlackListTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TheBlackListTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		73EA37E41BA1C80400973689 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		73EA37E51BA1C80400973689 /* TheBlackListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheBlackListTests.swift; sourceTree = "<group>"; };
+		73F8DD301BA5DAAD0057E412 /* SwiftyJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwiftyJSON.h; sourceTree = "<group>"; };
+		73F8DD311BA5DAAD0057E412 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,13 +88,18 @@
 		73EA37CA1BA1C80400973689 /* TheBlackList */ = {
 			isa = PBXGroup;
 			children = (
+				73F8DD301BA5DAAD0057E412 /* SwiftyJSON.h */,
+				73F8DD311BA5DAAD0057E412 /* SwiftyJSON.swift */,
 				73EA37CD1BA1C80400973689 /* AppDelegate.swift */,
 				73EA37CF1BA1C80400973689 /* MasterViewController.swift */,
+				737935E71BA6CCE4004AB6C1 /* Black.swift */,
 				73EA37D11BA1C80400973689 /* DetailViewController.swift */,
 				73EA37D31BA1C80400973689 /* Main.storyboard */,
 				73EA37D61BA1C80400973689 /* Images.xcassets */,
 				73EA37D81BA1C80400973689 /* LaunchScreen.xib */,
 				73EA37CB1BA1C80400973689 /* Supporting Files */,
+				73C777A91BA309AD00002C7B /* StarterViewController.swift */,
+				737935E91BA6DCD0004AB6C1 /* TBLController.swift */,
 			);
 			path = TheBlackList;
 			sourceTree = "<group>";
@@ -217,7 +231,11 @@
 			files = (
 				73EA37D21BA1C80400973689 /* DetailViewController.swift in Sources */,
 				73EA37D01BA1C80400973689 /* MasterViewController.swift in Sources */,
+				73C777AA1BA309AD00002C7B /* StarterViewController.swift in Sources */,
+				737935EA1BA6DCD0004AB6C1 /* TBLController.swift in Sources */,
+				73F8DD321BA5DAAD0057E412 /* SwiftyJSON.swift in Sources */,
 				73EA37CE1BA1C80400973689 /* AppDelegate.swift in Sources */,
+				737935E81BA6CCE4004AB6C1 /* Black.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,6 +363,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TheBlackList/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -355,6 +374,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TheBlackList/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -413,6 +433,7 @@
 				73EA37EB1BA1C80400973689 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		73EA37EC1BA1C80400973689 /* Build configuration list for PBXNativeTarget "TheBlackListTests" */ = {
 			isa = XCConfigurationList;
@@ -421,6 +442,7 @@
 				73EA37EE1BA1C80400973689 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

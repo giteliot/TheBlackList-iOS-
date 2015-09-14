@@ -9,9 +9,7 @@
 import UIKit
 
 class MasterViewController: UITableViewController {
-
     var objects = [AnyObject]()
-
 
     override func awakeFromNib() {
         super.awakeFromNib()
