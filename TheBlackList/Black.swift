@@ -7,20 +7,25 @@ class Black {
     var amount: Double
     var currency: String
     //optional
-    var friendlyName: String
     var why: String
     var when: String
     
     
-    init(id: Int, who: String, amount: Double, currency: String, friendlyName: String, why: String, when: String) {
+    init(id: Int, who: String, amount: Double, currency: String, why: String, when: String) {
         self.id = id
         self.who = who
         self.amount = amount
         self.currency = currency
-        self.friendlyName = friendlyName
         self.why = why
         self.when = when
     }
     
-    
+    init(id: Int) {
+        self.id = id
+        self.who = ""
+        self.amount = 0
+        self.currency = ""
+        self.why = ""
+        self.when = ""
+    }
 }
