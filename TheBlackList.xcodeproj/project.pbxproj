@@ -7,12 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7344CE3A1BB45AFE00EDE1AF /* LoginPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7344CE391BB45AFE00EDE1AF /* LoginPageController.swift */; settings = {ASSET_TAGS = (); }; };
+		7378EEC41BB94DCE00D3F114 /* BlackCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7378EEC31BB94DCE00D3F114 /* BlackCell.swift */; settings = {ASSET_TAGS = (); }; };
 		737935E81BA6CCE4004AB6C1 /* Black.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737935E71BA6CCE4004AB6C1 /* Black.swift */; };
 		737935EA1BA6DCD0004AB6C1 /* TBLController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737935E91BA6DCD0004AB6C1 /* TBLController.swift */; };
-		73C777AA1BA309AD00002C7B /* StarterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C777A91BA309AD00002C7B /* StarterViewController.swift */; };
+		737967311BBDB36C002D3DCB /* anonym_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 737967301BBDB36C002D3DCB /* anonym_icon.png */; settings = {ASSET_TAGS = (); }; };
+		73A2C7061BB0492400191B7F /* MainNavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A2C7051BB0492400191B7F /* MainNavController.swift */; settings = {ASSET_TAGS = (); }; };
+		73A2C7081BB08F7E00191B7F /* BlackDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A2C7071BB08F7E00191B7F /* BlackDetailController.swift */; settings = {ASSET_TAGS = (); }; };
+		73B0BEC11BB42933005996C4 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73B0BEC01BB42932005996C4 /* FBSDKLoginKit.framework */; };
+		73B0BEC51BB429C1005996C4 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73B0BEC41BB429C1005996C4 /* FBSDKCoreKit.framework */; };
 		73EA37CE1BA1C80400973689 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73EA37CD1BA1C80400973689 /* AppDelegate.swift */; };
-		73EA37D01BA1C80400973689 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73EA37CF1BA1C80400973689 /* MasterViewController.swift */; };
-		73EA37D21BA1C80400973689 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73EA37D11BA1C80400973689 /* DetailViewController.swift */; };
 		73EA37D51BA1C80400973689 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73EA37D31BA1C80400973689 /* Main.storyboard */; };
 		73EA37D71BA1C80400973689 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73EA37D61BA1C80400973689 /* Images.xcassets */; };
 		73EA37DA1BA1C80400973689 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 73EA37D81BA1C80400973689 /* LaunchScreen.xib */; };
@@ -31,14 +35,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7344CE391BB45AFE00EDE1AF /* LoginPageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginPageController.swift; sourceTree = "<group>"; };
+		7378EEC31BB94DCE00D3F114 /* BlackCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlackCell.swift; sourceTree = "<group>"; };
 		737935E71BA6CCE4004AB6C1 /* Black.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Black.swift; sourceTree = "<group>"; };
 		737935E91BA6DCD0004AB6C1 /* TBLController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TBLController.swift; sourceTree = "<group>"; };
-		73C777A91BA309AD00002C7B /* StarterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarterViewController.swift; sourceTree = "<group>"; };
+		737967301BBDB36C002D3DCB /* anonym_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = anonym_icon.png; sourceTree = "<group>"; };
+		73A2C7051BB0492400191B7F /* MainNavController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainNavController.swift; sourceTree = "<group>"; };
+		73A2C7071BB08F7E00191B7F /* BlackDetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlackDetailController.swift; sourceTree = "<group>"; };
+		73B0BEC01BB42932005996C4 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = "../../../Desktop/Work/MyProjects/The Black List/FacebookSDK/FacebookSDKs-iOS-20150910/FBSDKLoginKit.framework"; sourceTree = "<group>"; };
+		73B0BEC41BB429C1005996C4 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = "../../../Desktop/Work/MyProjects/The Black List/FacebookSDK/FacebookSDKs-iOS-20150910/FBSDKCoreKit.framework"; sourceTree = "<group>"; };
 		73EA37C81BA1C80400973689 /* TheBlackList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheBlackList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		73EA37CC1BA1C80400973689 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		73EA37CD1BA1C80400973689 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		73EA37CF1BA1C80400973689 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
-		73EA37D11BA1C80400973689 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		73EA37D41BA1C80400973689 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		73EA37D61BA1C80400973689 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		73EA37D91BA1C80400973689 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -54,6 +62,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73B0BEC51BB429C1005996C4 /* FBSDKCoreKit.framework in Frameworks */,
+				73B0BEC11BB42933005996C4 /* FBSDKLoginKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,6 +80,8 @@
 		73EA37BF1BA1C80400973689 = {
 			isa = PBXGroup;
 			children = (
+				73B0BEC41BB429C1005996C4 /* FBSDKCoreKit.framework */,
+				73B0BEC01BB42932005996C4 /* FBSDKLoginKit.framework */,
 				73EA37CA1BA1C80400973689 /* TheBlackList */,
 				73EA37E21BA1C80400973689 /* TheBlackListTests */,
 				73EA37C91BA1C80400973689 /* Products */,
@@ -91,15 +103,16 @@
 				73F8DD301BA5DAAD0057E412 /* SwiftyJSON.h */,
 				73F8DD311BA5DAAD0057E412 /* SwiftyJSON.swift */,
 				73EA37CD1BA1C80400973689 /* AppDelegate.swift */,
-				73EA37CF1BA1C80400973689 /* MasterViewController.swift */,
 				737935E71BA6CCE4004AB6C1 /* Black.swift */,
-				73EA37D11BA1C80400973689 /* DetailViewController.swift */,
+				7378EEC31BB94DCE00D3F114 /* BlackCell.swift */,
 				73EA37D31BA1C80400973689 /* Main.storyboard */,
+				73A2C7051BB0492400191B7F /* MainNavController.swift */,
+				7344CE391BB45AFE00EDE1AF /* LoginPageController.swift */,
+				737935E91BA6DCD0004AB6C1 /* TBLController.swift */,
+				73A2C7071BB08F7E00191B7F /* BlackDetailController.swift */,
 				73EA37D61BA1C80400973689 /* Images.xcassets */,
 				73EA37D81BA1C80400973689 /* LaunchScreen.xib */,
 				73EA37CB1BA1C80400973689 /* Supporting Files */,
-				73C777A91BA309AD00002C7B /* StarterViewController.swift */,
-				737935E91BA6DCD0004AB6C1 /* TBLController.swift */,
 			);
 			path = TheBlackList;
 			sourceTree = "<group>";
@@ -107,6 +120,7 @@
 		73EA37CB1BA1C80400973689 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				737967301BBDB36C002D3DCB /* anonym_icon.png */,
 				73EA37CC1BA1C80400973689 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -173,11 +187,14 @@
 		73EA37C01BA1C80400973689 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0640;
+				LastSwiftMigration = 0700;
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Elia Chinellato";
 				TargetAttributes = {
 					73EA37C71BA1C80400973689 = {
 						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = EYRQVR3DBD;
 					};
 					73EA37DE1BA1C80400973689 = {
 						CreatedOnToolsVersion = 6.4;
@@ -209,6 +226,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				737967311BBDB36C002D3DCB /* anonym_icon.png in Resources */,
 				73EA37D51BA1C80400973689 /* Main.storyboard in Resources */,
 				73EA37DA1BA1C80400973689 /* LaunchScreen.xib in Resources */,
 				73EA37D71BA1C80400973689 /* Images.xcassets in Resources */,
@@ -229,12 +247,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				73EA37D21BA1C80400973689 /* DetailViewController.swift in Sources */,
-				73EA37D01BA1C80400973689 /* MasterViewController.swift in Sources */,
-				73C777AA1BA309AD00002C7B /* StarterViewController.swift in Sources */,
+				7378EEC41BB94DCE00D3F114 /* BlackCell.swift in Sources */,
 				737935EA1BA6DCD0004AB6C1 /* TBLController.swift in Sources */,
 				73F8DD321BA5DAAD0057E412 /* SwiftyJSON.swift in Sources */,
+				73A2C7061BB0492400191B7F /* MainNavController.swift in Sources */,
+				73A2C7081BB08F7E00191B7F /* BlackDetailController.swift in Sources */,
 				73EA37CE1BA1C80400973689 /* AppDelegate.swift in Sources */,
+				7344CE3A1BB45AFE00EDE1AF /* LoginPageController.swift in Sources */,
 				737935E81BA6CCE4004AB6C1 /* Black.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -298,6 +317,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -362,10 +382,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = TheBlackList/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.rexismad.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -373,10 +401,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = TheBlackList/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.rexismad.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -394,6 +430,7 @@
 				);
 				INFOPLIST_FILE = TheBlackListTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.rexismad.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TheBlackList.app/TheBlackList";
 			};
@@ -409,6 +446,7 @@
 				);
 				INFOPLIST_FILE = TheBlackListTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.rexismad.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TheBlackList.app/TheBlackList";
 			};
