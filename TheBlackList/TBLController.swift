@@ -60,15 +60,19 @@ class TBLController: UITableViewController {
                         var tmpBlack: Black
                         var i = 0
                         for i = 0; i < dataRes.count; i++ {
-                            tmpBlack = Black(id: dataRes[i]["id"].int!,who: dataRes[i]["who"].string!, amount: dataRes[i]["amount"].double!, currency: dataRes[i]["currency"].string!, why: dataRes[i]["why"].string!, when: dataRes[i]["when"].string!)
+                            let currentBlack = dataRes[i]
+                            var imgUrl = ""
+                            if currentBlack["complBlack"] != nil {
+                                let complUserId = currentBlack["complBlack"]["userId"].string!
+                                imgUrl = "https://graph.facebook.com/\(complUserId)/picture?type=large"
+                            }
+                            
+                            tmpBlack = Black(id: currentBlack["id"].int!,who: currentBlack["who"].string!, amount: currentBlack["amount"].double!, currency: currentBlack["currency"].string!, why: currentBlack["why"].string!, when: currentBlack["when"].string!, imageUrl: imgUrl)
                             
                             self.insertBlack(tmpBlack)
                         }
-                        
                     })
                 }
-                
-                
             } else {
                 dispatch_async(dispatch_get_main_queue(), {
                     print("MISTAKES HAPPENED")
@@ -96,12 +100,31 @@ class TBLController: UITableViewController {
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! BlackCell
-        
+
         let tmpB = blacks[indexPath.row]
-        cell.blackImage.image = UIImage(named: "anonym_icon")
+        if tmpB.imageUrl.isEmpty {
+            cell.blackImage.image = UIImage(named: "anonym_icon")
+        } else {
+            ImageLoader.sharedLoader.imageForUrl(tmpB.imageUrl, completionHandler:{(image: UIImage?, url: String) in
+                dispatch_async(dispatch_get_main_queue(), {
+                    cell.blackImage.image = image
+                })
+                
+            })
+            
+            cell.blackImage.layer.cornerRadius = cell.blackImage.frame.size.width/2
+            cell.blackImage.clipsToBounds = true
+        }
+        let amountString = String(format:"%.2f", tmpB.amount)+"\(tmpB.currency)"
+        let coloredAmount = NSMutableAttributedString(string: "\(amountString)  \(tmpB.why)")
+        var amountColor = UIColor.redColor()
+        if (tmpB.amount > 0) {
+            amountColor = UIColor(red: 0.33, green: 0.8, blue: 0.25, alpha: 1)
+        }
+        coloredAmount.addAttribute(NSForegroundColorAttributeName, value: amountColor, range: NSRange(location: 0, length: amountString.characters.count))
+        coloredAmount.addAttribute(NSFontAttributeName, value: UIFont.boldSystemFontOfSize(17), range: NSRange(location: 0, length: amountString.characters.count))
         cell.usernameLabel.text = tmpB.who
-        cell.priceLabel.text = String(format:"%.2f", tmpB.amount)+"\(tmpB.currency) \(tmpB.why)"
-        
+        cell.priceLabel.attributedText = coloredAmount
         if !tmpB.when.isEmpty {
             let formatter = NSDateFormatter()
             formatter.locale = NSLocale(localeIdentifier: "eu")
@@ -110,7 +133,6 @@ class TBLController: UITableViewController {
             if fromDate == nil {
                 fromDate = NSDate()
             }
-            print("Date: \(fromDate)")
             let toDate = NSDate()
             let cal = NSCalendar.currentCalendar()
             let unit:NSCalendarUnit = NSCalendarUnit.Day
@@ -150,7 +172,7 @@ class TBLController: UITableViewController {
                 let object = blacks[indexPath.row]
                 let mySegue = segue.destinationViewController as! BlackDetailController
                 mySegue.username = self.username
-                mySegue.black = Black(id: object.id, who: object.who, amount: object.amount, currency: object.currency, why: object.why, when: object.when)
+                mySegue.black = Black(id: object.id, who: object.who, amount: object.amount, currency: object.currency, why: object.why, when: object.when, imageUrl: object.imageUrl)
             }
         }
         

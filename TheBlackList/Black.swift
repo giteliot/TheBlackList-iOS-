@@ -9,15 +9,16 @@ class Black {
     //optional
     var why: String
     var when: String
-    
-    
-    init(id: Int, who: String, amount: Double, currency: String, why: String, when: String) {
+    var imageUrl: String
+
+    init(id: Int, who: String, amount: Double, currency: String, why: String, when: String, imageUrl: String) {
         self.id = id
         self.who = who
         self.amount = amount
         self.currency = currency
         self.why = why
         self.when = when
+        self.imageUrl = imageUrl
     }
     
     init(id: Int) {
@@ -27,5 +28,6 @@ class Black {
         self.currency = ""
         self.why = ""
         self.when = ""
+        self.imageUrl = ""
     }
 }

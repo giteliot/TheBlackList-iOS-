@@ -27,7 +27,8 @@ class BlackDetailController: UIViewController, UIPickerViewDataSource, UIPickerV
     let baseApi = "https://theblacklist.eu-gb.mybluemix.net/api"
     let currencies = ["$", "€", "£"]
     var activeField: UITextField?
-    var selectedFriendId = 0
+    var selectedFriendId = ""
+    var friendToIdTable = NSDictionary()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,13 +54,13 @@ class BlackDetailController: UIViewController, UIPickerViewDataSource, UIPickerV
         if (black != nil) {
             deleteButton.hidden = black!.who.isEmpty
             whoInput.text = black!.who
-            amountInput.text = black!.amount > 0 ? String(format: "%.2f", black!.amount) : ""
+            amountInput.text = black!.amount != 0 ? String(format: "%.2f", black!.amount) : ""
             whyInput.text = black!.why
             if (black?.currency != nil && !(black!.who.isEmpty) ) {
                 currencyPicker.selectRow(currencies.indexOf((black?.currency)!)!, inComponent: 0, animated: false)
             }
         }
-        self.selectedFriendId = 0
+        self.selectedFriendId = ""
         self.getFriendList()
     }
     
@@ -130,24 +131,24 @@ class BlackDetailController: UIViewController, UIPickerViewDataSource, UIPickerV
         formatter.dateFormat = "yyyy-MM-dd HH:mm:ss zzz"
         let when:String = formatter.stringFromDate(nowDate)
         
-        //if self.selectedFriendId == 0 {
-            callAddBlack(self.username, id: self.black!.id, who: who, amount: amount, cur: cur, why: why, when: when, sender: sender)
-        //} else {
-        //    print("Devo chiamare l'altra funzione")
-        //}
+        let friendIndexId = self.friends.indexOf(self.whoInput.text!)
+        if  friendIndexId != nil && friendIndexId > -1 {
+            let inputFriendId:String = self.friendsId[friendIndexId!]
+            self.selectedFriendId = inputFriendId
+            print("selectedFriendId -> \(self.selectedFriendId)")
+        }
         
-        
-        
+        callAddBlack(self.username, id: self.black!.id, who: who, amount: amount, cur: cur, why: why, when: when, sender: sender)
         }
     
     func callAddBlack(username: String, id: Int, who: String, amount: Double, cur: String, why: String, when: String, sender: AnyObject?) {
         print("Adding black with id "+String(id))
         
         var url = "";
-        if self.selectedFriendId == 0 {
-            url = self.baseApi+"/addBlack?user=\(self.username)"
+        if self.selectedFriendId.isEmpty {
+            url = self.baseApi+"/addBlack?user=\(username)"
         } else {
-            url = self.baseApi+"/addBlackAndCompl?user=\(self.username)&complUser=\(self.selectedFriendId)"
+            url = self.baseApi+"/addBlackAndCompl?user=\(username)&complUser=\(self.selectedFriendId)"
         }
         
         print("-> "+url)
@@ -240,7 +241,7 @@ class BlackDetailController: UIViewController, UIPickerViewDataSource, UIPickerV
                 dispatch_async(dispatch_get_main_queue(), {
                     
                     if let data = (result as! NSDictionary)["data"] {
-                        print("ID's: \(self.friendsId)")
+                        
                         let dataArr = data as! NSArray
                         for friend in dataArr {
                             let friendName:String = friend["name"] as! String
@@ -248,6 +249,7 @@ class BlackDetailController: UIViewController, UIPickerViewDataSource, UIPickerV
                             self.friendsId.append(friend["id"] as! String )
                         }
                         print("FRIENDS: \(self.friends)")
+                        print("ID's: \(self.friendsId)")
                     }
                 })
                 
@@ -300,14 +302,7 @@ class BlackDetailController: UIViewController, UIPickerViewDataSource, UIPickerV
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        whoInput.text = autoFriends[indexPath.row]
-        if let tmpStrId = NSNumberFormatter().numberFromString(self.friendsId[indexPath.row]) {
-            self.selectedFriendId = tmpStrId.integerValue
-            //aggiungi qua l'azione della selezione del fb friend (e.g. l'immagine del profilo)
-        } else {
-            self.selectedFriendId = 0
-        }
-        
+        whoInput.text = autoFriends[indexPath.row]        
         friendsTable.hidden = true
 
     }

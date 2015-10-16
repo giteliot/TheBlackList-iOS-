@@ -16,6 +16,7 @@ class LoginPageController: UIViewController, FBSDKLoginButtonDelegate {
     @IBOutlet var userLabel: UILabel!
     @IBOutlet var fbLoginButton: FBSDKLoginButton!
     @IBOutlet var goToTblButton: UIBarButtonItem!
+    @IBOutlet var profileImg: UIImageView!
     
     let baseApi = "https://theblacklist.eu-gb.mybluemix.net/api"
     var userId = ""
@@ -63,7 +64,14 @@ class LoginPageController: UIViewController, FBSDKLoginButtonDelegate {
                 if (shouldRegister == true) {
                     self.registerUser(userId as String, name: userName as String)
                 }
-                
+                ImageLoader.sharedLoader.imageForUrl("https://graph.facebook.com/\(userId)/picture?type=large", completionHandler:{(image: UIImage?, url: String) in
+                    dispatch_async(dispatch_get_main_queue(), {
+                        self.profileImg.image = image
+                    })
+                    
+                })
+                self.profileImg.layer.cornerRadius = self.profileImg.frame.size.width/2
+                self.profileImg.clipsToBounds = true
                 self.performSegueWithIdentifier("showTbl", sender: self)
             } else {
                 print("Error: \(error)")
@@ -134,6 +142,7 @@ class LoginPageController: UIViewController, FBSDKLoginButtonDelegate {
         self.descLabel.text = "You are not logged in"
         self.userLabel.hidden = false
         self.userLabel.text = ""
+        self.profileImg.image = UIImage(named: "anonym_icon")
         navigationItem.rightBarButtonItems = []
     }
 
